@@ -1,0 +1,42 @@
+<form id="ability-use-form">
+    <p>{{ title }}</p>
+    <p class="notes">{{note}}</p>
+    {{#each errors}}
+    {{/each}}
+
+    {{#if consumeSpellSlot}}
+    <div class="form-group">
+        <div class="form-fields">
+        </div>
+    </div>
+
+
+    {{/if}}
+
+    {{#if consumeUses}}
+    <div class="form-group">
+        <label class="checkbox"><input type="checkbox" name="consumeUse" checked/>{{ localize "N5E.AbilityUseConsume" }}</label>
+    </div>
+    {{/if}}
+
+    {{#if consumeResource}}
+    <div class="form-group">
+        <label class="checkbox"><input type="checkbox" name="consumeResource" checked/>{{ localize "N5E.ConsumeResource" }}</label>
+    </div>
+    {{/if}}
+
+    {{#if consumeRecharge}}
+    <div class="form-group">
+        <label class="checkbox"><input type="checkbox" name="consumeRecharge" checked/>{{ localize "N5E.ConsumeRecharge" }}</label>
+    </div>
+    {{/if}}
+    
+    {{#if createTemplate}}
+    <div class="form-group">
+        <label class="checkbox">
+            <input type="checkbox" name="placeTemplate" checked/>
+            {{ localize "N5E.PlaceTemplate" }}
+        </label>
+    </div>
+    {{/if}}
+</form>
